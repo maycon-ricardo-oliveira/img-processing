@@ -1,5 +1,5 @@
 const video = document.getElementById('video')
-
+const Detection = require('./modules/Detection')
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
@@ -32,5 +32,13 @@ video.addEventListener('play', () => {
     faceapi.draw.drawDetections(canvas, resizedDetections)
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+
+
+    if (resizedDetections.length > 0) {
+      console.log(resizedDetections[0].detection);
+
+
+    }
+
   }, 100)
 })

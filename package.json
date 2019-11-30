@@ -1,0 +1,27 @@
+{
+  "name": "img-process",
+  "version": "1.0.0",
+  "description": "",
+  "main": "face-api.min.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayconRick/img-processing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MayconRick/img-processing/issues"
+  },
+  "homepage": "https://github.com/MayconRick/img-processing#readme"
+}
