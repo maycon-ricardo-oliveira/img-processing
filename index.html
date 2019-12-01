@@ -8,26 +8,51 @@
 
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
+    #test {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .detection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      background-color: #fff;
+      width: 90%;
+      max-width: 375px;
+       box-shadow: 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 3px 1px -2px rgba(0, 0, 0, 0.12), 
+        0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+    
     canvas {
       position: absolute;
       display: flex;
-      align-items: center;
     }
+
   </style>
 </head>
 <body>
-  <video id="video" width="720" height="560" autoplay muted></video>
+  <div id="test">
+    <video id="video" width="520" height="440" autoplay muted></video>
+    
+  </div>
+  <div class="detection">
+    <h2 id="expression"> </h2>
+    <h2 id="motivation-text"></h2>
+    <h2 id="author"></h2>
+  </div>
+  
 
   <script defer src="lib/face-api.min.js"></script>
-  <script defer src="script.js"></script>
+  <script defer src="scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </body>
 </html>
